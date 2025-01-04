@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>USAdventures</title>
+        <link rel="stylesheet" href="menu.css">
+    </head>
+
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="acc.html"><img src="site_sae/img/logo.png" alt="Logo"></a>
+        </div>
+        <div class="titre">
+            <a href="acc.html">USAdventures</a>
+        </div>
+        
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#">Populaires</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="menu.html">Les parcs</a></li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <form id="search-form">
+                <input type="text" placeholder="Rechercher...">
+                <input type="submit" value="Rechercher">
+            </form>
+        </div>        
+    </header>
+
+    <body>
+        
+        
+
+        <div class="modal" id="parcs-modal">
+            <div class="modal-content">
+                <ul class="icon">
+                    <li><a href="yosemite.html">YOSEMITE PARK</a></li>
+                    <li><a href="zion.html">ZION PARK</a></li>
+                    <li><a href="grand_canyon.html">GRAND CANYON</a></li>
+                    <li><a href="yellowstone.html*">YELLOWSTONE</a></li>
+                    <li><a href="great_smoky_mountains.html">GREAT SMOKY MOUNTAINS</a></li>
+                    <li><a href="bryce_canyon">BRYCE CANYON</a></li>
+                    <li><a href="hot_springs">HOT SPRINGS</a></li>
+                    <li><a href="wse.html">WRANGELL-SAINT-ELIE</a></li>
+                    <li><a href="gota.html">GATES OF THE ARCTIC (ALASKA)</a></li>
+                </ul>
+            </div>
+        </div>
+        
+            
+
+        <script>
+            var parcsLink = document.getElementById("parcs-link");
+            var parcsModal = document.getElementById("parcs-modal");
+            var closeButton = document.getElementById("close-button");
+            var hamburgerMenu = document.getElementById("hamburger-menu");
+            var mobileMenu = document.querySelector(".mobile-menu");
+
+            parcsLink.addEventListener("click", function() {
+                parcsModal.style.display = "block";
+            });
+
+            closeButton.addEventListener("click", function() {
+                parcsModal.style.display = "none";
+            });
+
+            hamburgerMenu.addEventListener("click", function() {
+                parcsModal.style.display = "block";
+            });
+
+            window.addEventListener("click", function(event) {
+                if (event.target == parcsModal) {
+                    parcsModal.style.display = "none";
+                }
+
+                // Gérer le menu mobile
+                function toggleMobileMenu() {
+                    var desktopMenu = document.querySelector(".desktop-menu");
+                    desktopMenu.classList.toggle("show");
+                }
+
+                mobileMenu.addEventListener("click", toggleMobileMenu);
+            });
+        </script> 
+    
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><img src="site_sae/img/fb.png" alt="Icon"></a>
+                <a href="https://www.instagram.com/"><img src="site_sae/img/insta.jpeg" alt="Icon"></a>
+                <a href="https://www.twitter.com"><img src="site_sae/img/x.png" alt="Icon"></a>
+            </div>
+    
+            <div class="legal-info">
+                <a href="https://entreprendre.service-public.fr/vosdroits/F31228">Mentions Légales</a>
+            </div>
+    
+            <div class="language-switch">
+                <a href="acc_en.html" id="toggle-language">
+                    Changer de Langue
+                </a>
+            </div>
+    
+        </footer>
+        <script src="acc.js"></script>
+        <script src="recherche.js"></script>
+
+    </body>
+
+</html>

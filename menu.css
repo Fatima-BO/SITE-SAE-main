@@ -1,0 +1,271 @@
+/*------------------------------ HEADER -----------------------------------*/
+.header {
+    background-color: white;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.titre a {
+    text-decoration: none; /* Retire le soulignement des liens */
+    color: black; /* Couleur du texte par défaut */
+    transition: color 0.3s ease; /* Ajoute une transition pour une animation fluide */
+}
+
+.titre a:hover {
+    color: red; /* Change la couleur du texte en rouge lorsqu'il est survolé */
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.titre {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.menu ul {
+    margin-left: 150px;
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 150px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: red; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('site_sae/img/canyon-gorge.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+    color: white; 
+    scroll-behavior: smooth;
+}
+/*---------------------------------- RECHERCHE ----------------------------*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 19px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #505050;
+    width: 150px; 
+    margin-right: 5px;
+}
+
+.search-bar input[type="submit"] {
+    padding: 10px 20px; /* Ajustez le padding pour correspondre à celui du champ de texte */
+    font-size: 16px;
+    background-color: #505050;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar input[type="submit"]:hover {
+    background-color: red;
+}
+/*---------------------------------------------------------------------------*/
+
+/*---------------------------------- FOOTER ---------------------------------*/
+.footer {
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-icons {
+    display: flex; /* Utilise un conteneur flex pour les éléments .social-icons */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.social-icons img {
+    width: 40px; /* ou la largeur désirée pour vos images */
+    height: 40px; /* ou la hauteur désirée pour vos images */
+    margin-right: 20px; /* Espace entre les images (ajustez selon vos préférences) */
+}
+
+.legal-info a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*---------------------------------------------------------------------------*/
+/*------------------------- LANGUE -----------------------*/
+.flag-icon-fr {
+    background-image: url('site_sae/img/fr.png');
+}
+
+.flag-icon-en {
+    background-image: url('site_sae/img/en.png');
+}
+
+.flag-icon {
+    display: inline-block;
+    width: 20px; /* Ajustez la largeur selon la taille de votre icône de drapeau */
+    height: 20px; /* Ajustez la hauteur selon la taille de votre icône de drapeau */
+    background-size: cover;
+    margin-right: 5px; /* Espacement entre l'icône de drapeau et le texte */
+}
+/*-----------------------------------------------------------*/
+
+
+.modal {
+    position: fixed;
+    top: 100;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.icon{
+    list-style: none;  
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#hamburger-menu{
+    display: none;
+}
+
+.modal-content {
+    overflow: scroll;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+.close{
+    color: white;
+    font-size: 50px;
+}
+
+.modal-content li {
+    padding: 10px;
+    border-top: 1px solid white;
+}
+
+.modal-content a {
+    color: white;
+}
+
+ 
+    @media only screen
+    and (max-device-width : 767PX) 
+    and (orientation : portrait) {
+
+        .sidenav {
+        height: 150px;
+        width: 100%s;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -250px;
+        background-color: #333;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+        }
+
+        .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        }
+        
+        /* Sidenav menu links */
+        .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+        color: red;
+        }
+        
+        /* Active class */
+        .sidenav.active {
+        left: 0;
+        width: 100%;
+        }
+        
+        /* Close btn */
+        .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        }
+        
+        .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        }
+
+        .desktop-menu{
+        list-style: none;
+        background-color: #333;
+        text-align: left;
+        padding-left: 0px;
+        margin-top: 50px;
+        }
+
+        .desktop-menu a {
+        color: white;
+        } 
+}
